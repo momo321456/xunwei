@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们 - 寻味中国</title>
+    <link rel="stylesheet" href="../css/1225.css">
+    <style>
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: rgb(55, 105, 244);
+            font-size: 1em;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .music-button {
+            position: absolute;
+            right: 20px;
+            top: 100px;
+            z-index: 1000;
+        }
+
+        .music-button button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .music-button button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="regions.html">地方特色</a></li>
+            <li><a href="recipes.html">精品食谱</a></li>
+            <li><a href="about.html">关于我们</a></li>
+        </ul>
+        <a href="login.html" class="login-button">登录</a>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-logo"></div>
+            <div class="hero-text">
+                <h1>关于我们</h1>
+                <p>我们是一群热爱中国美食的人，希望通过这个网站，让更多的人了解和喜欢中国的饮食文化。</p>
+            </div>
+            <div class="hero-logo"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>我们的团队</h2>
+        <ul>
+            <li>郭印睿  24107290911</li>
+            <li>郭印睿  网站制作</li>
+            <li>郭印睿  太酷啦</li>
+        </ul>
+    </div>
+    
+    <footer class="footer">
+        <p>版权所有 郭印睿 | 联系我们:24107290911 不给满分我会心痛的</p>
+    </footer>
+    <div class="music-button">
+        <button onclick="toggleMusic()">播放音乐</button>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--冬眠--</h4>
+        <audio id="background-music" loop>
+            <source src="../img/冬眠.mp3" type="audio/mpeg">
+            您的浏览器不支持音频元素。
+        </audio>
+    </div>
+    <script>
+        const snowflakeCount = 100;
+        const snowflakes = [];
+
+        for (let i = 0; i < snowflakeCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(snowflake);
+            snowflakes.push(snowflake);
+        }
+
+        function toggleMusic() {
+            const music = document.getElementById('background-music');
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+</body>
+</html>
+

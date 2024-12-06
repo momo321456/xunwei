@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>美食探索 - 寻味中国</title>
+    <link rel="stylesheet" href="css/1225.css">
+</head>
+<body>
+    <div class="rain"></div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="page/regions.html">地方特色</a></li>
+            <li><a href="page/recipes.html">精品食谱</a></li>
+            <li><a href="page/about.html">关于我们</a></li>
+        </ul>
+        <a href="page/login.html" class="login-button">登录</a>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-logo"></div>
+            <div class="hero-text">
+                <h1>寻味中国 - 探索舌尖上的美味</h1>
+                <p>带您领略中华美食文化的无穷魅力</p>
+            </div>
+            <div class="hero-logo"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="food-grid">
+            <div class="food-item">
+                <div class="food-img beijing-duck"></div>
+                <div class="food-desc">
+                    <h3>北京烤鸭</h3>
+                    <p>北京烤鸭是北京最著名的烤鸭坊酒楼的招牌菜，由选用优质肥嫩鸭坯，果木炭火烤制而成。</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <div class="food-img sichuan-hotpot"></div>
+                <div class="food-desc">
+                    <h3>四川火锅</h3>
+                    <p>四川火锅以其独特的麻辣味道闻名于世，是川渝地区最具代表性的美食之一。</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <div class="food-img west-lake-fish"></div>
+                <div class="food-desc">
+                    <h3>西湖醋鱼</h3>
+                    <p>西湖醋鱼是浙江省杭州市的传统名菜，以其酸甜可口的味道深受欢迎。</p>
+                </div>
+            </div>
+            <div class="food-item">
+                <div class="food-img dim-sum"></div>
+                <div class="food-desc">
+                    <h3>广东早茶</h3>
+                    <p>广东早茶文化源远流长，各式点心、茶饮展现了粤式饮食文化的精髓。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>版权所有 郭印睿 | 联系我们:24107290911 这么优秀的我你不给我满分吗？</p>
+    </footer>
+    <script>
+        
+        const rainContainer = document.querySelector('.rain');
+        const numberOfDrops = 100; 
+
+        for (let i = 0; i < numberOfDrops; i++) {
+            const drop = document.createElement('div');
+            drop.classList.add('drop');
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.animationDuration = Math.random() * 1 + 0.5 + 's'; 
+            drop.style.opacity = Math.random(); 
+            rainContainer.appendChild(drop);
+        }
+    </script>
+</body>
+</html>

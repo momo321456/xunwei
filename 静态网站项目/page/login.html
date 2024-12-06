@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../css/1225.css">
+</head>
+<body>
+    <div class="rain"></div>
+    <nav class="nav">
+        <ul>
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="regions.html">地方特色</a></li>
+            <li><a href="recipes.html">精品食谱</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="login.html" class="login-button">登录</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-container">
+        <h2>登录</h2>
+        <form action="../index.html" method="post">
+            <label for="username">用户名：</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">密码：</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="登录" class="login-button">
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>版权所有 郭印睿 | 联系我们:我感觉做的非常完美</p>
+    </footer>
+
+    <script>
+        
+        const rainContainer = document.querySelector('.rain');
+        const numberOfDrops = 100; 
+
+        for (let i = 0; i < numberOfDrops; i++) {
+            const drop = document.createElement('div');
+            drop.classList.add('drop');
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.animationDuration = Math.random() * 1 + 0.5 + 's'; 
+            drop.style.opacity = Math.random(); 
+            rainContainer.appendChild(drop);
+        }
+    </script>
+</body>
+</html>
+

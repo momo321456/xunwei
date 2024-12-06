@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>地方特色 - 寻味中国</title>
+    <link rel="stylesheet" href="../css/1225.css">
+  
+</head>
+<body>
+    <div class="rain"></div>
+    <nav class="nav">
+        <ul>
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="regions.html">地方特色</a></li>
+            <li><a href="recipes.html">精品食谱</a></li>
+            <li><a href="about.html">关于我们</a></li>
+        </ul>
+        <a href="login.html" class="login-button">登录</a>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-logo"></div>
+            <div class="hero-text">
+                <h1>中国八大菜系</h1>
+                <p>探索中国各地独特的饮食文化与传统</p>
+            </div>
+            <div class="hero-logo"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="region-grid">
+            <div class="region-card">
+                <div class="region-img lu-cuisine"></div>
+                <div class="region-info">
+                    <h3>鲁菜</h3>
+                    <p>以清鲜淡雅著称，注重原料本味，以汤见长。代表菜品：葱烧海参、糖醋鲤鱼。</p>
+                </div>
+            </div>
+            <div class="region-card">
+                <div class="region-img sichuan-cuisine"></div>
+                <div class="region-info">
+                    <h3>川菜</h3>
+                    <p>以麻辣著称，口味独特，菜品丰富。代表菜品：麻婆豆腐、宫保鸡丁。</p>
+                </div>
+            </div>
+            <div class="region-card">
+                <div class="region-img yue-cuisine"></div>
+                <div class="region-info">
+                    <h3>粤菜</h3>
+                    <p>清淡鲜美，讲究火候，善用海鲜。代表菜品：白切鸡、清蒸鱼。</p>
+                </div>
+            </div>
+            <div class="region-card">
+                <div class="region-img su-cuisine"></div>
+                <div class="region-info">
+                    <h3>苏菜</h3>
+                    <p>清淡适中，注重刀工，擅长烹饪河鲜。代表菜品：松鼠桂鱼、清炒虾仁。</p>
+                </div>
+            </div>
+            <div class="region-card">
+                <div class="region-img zhe-cuisine"></div>
+                <div class="region-info">
+                    <h3>浙菜</h3>
+                    <p>清新淡雅，注重本味，善用海鲜。代表菜品：西湖醋鱼、龙井虾仁。</p>
+                </div>
+            </div>
+            <div class="region-card">
+                <div class="region-img min-cuisine"></div>
+                <div class="region-info">
+                    <h3>闽菜</h3>
+                    <p>清鲜美味，注重汤品，善用海鲜。代表菜品：佛跳墙、蚝仔煎。</p>
+                </div>
+            </div>
+            <div class="region-card">
+                <div class="region-img xiang-cuisine"></div>
+                <div class="region-info">
+                    <h3>湘菜</h3>
+                    <p>香辣可口，重油重辣，口味浓郁。代表菜品：剁椒鱼头、农家小炒肉。</p>
+                </div>
+            </div>
+            <div class="region-card">
+                <div class="region-img hui-cuisine"></div>
+                <div class="region-info">
+                    <h3>徽菜</h3>
+                    <p>火功精湛，注重原料，善用山珍。代表菜品：毛豆腐、臭鳜鱼。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>版权所有 郭印睿 | 联系我们:24107290911 这你不给满分?</p>
+    </footer>
+    <script>
+        
+        const rainContainer = document.querySelector('.rain');
+        const numberOfDrops = 100; 
+
+        for (let i = 0; i < numberOfDrops; i++) {
+            const drop = document.createElement('div');
+            drop.classList.add('drop');
+            drop.style.left = Math.random() * 100 + 'vw';
+            drop.style.animationDuration = Math.random() * 1 + 0.5 + 's'; 
+            drop.style.opacity = Math.random(); 
+            rainContainer.appendChild(drop);
+        }
+    </script>
+</body>
+</html> 
